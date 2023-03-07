@@ -1,0 +1,24 @@
+[package]
+name = "serde_canonical_json"
+version = "1.0.0"
+edition = "2021"
+authors = ["Patrick Gelvin <patrick@gelvin.dev>"]
+description = "Implements a CanonicalFormatter for serde_json"
+homepage = "https://github.com/gelvinp/rs-serde_canonical_json"
+documentation = "https://docs.rs/serde_canonical_json"
+repository = "https://github.com/gelvinp/rs-serde_canonical_json"
+readme = "README.md"
+license = "MIT"
+keywords = ["serde", "json", "canonical"]
+categories = ["encoding"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lazy_static = "1.4.0"
+regex = { version = "1.7.1", default_features = false, features = ["std", "perf"] }
+serde_json = "1.0.94"
+itoa = "1.0"
+
+[dev-dependencies]
+serde = { version = "1.0.153", features = ["derive"] }
